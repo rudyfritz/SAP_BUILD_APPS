@@ -1,0 +1,58 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "source": "^/index.html$",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "public, max-age=600, must-revalidate"
+    },
+    {
+      "source": "^/destinations/SAP-Build-Apps-Runtime/(.*)$",
+      "target": "$1",
+      "destination": "builtin-vcf-destination",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/destinations/SAP-Build-Apps-User-Metering/(.*)$",
+      "target": "$1",
+      "destination": "builtin-user-metering-destination",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/destinations/sap_process_automation_service_user_access(.*)$",
+      "target": "$1",
+      "destination": "sap_process_automation_service_user_access",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/user-api/.*$",
+      "target": "$1",
+      "service": "sap-approuter-userapi",
+      "cacheControl": "no-store"
+    },
+    {
+      "source": "^/(_next|styles|images)/(.*)$",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "public, max-age=31536000"
+    },
+    {
+      "source": "^/(.*).(js|json|ico|png|svg|jpg|jpeg|gif|webp)$",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "public, max-age=31536000"
+    },
+    {
+      "source": "^/nodered.min.js\\?",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "public, max-age=31536000"
+    },
+    {
+      "source": "^(.*)$",
+      "target": "$1",
+      "service": "html5-apps-repo-rt",
+      "cacheControl": "no-store"
+    }
+  ],
+  "logout": {
+    "logoutEndpoint": "/"
+  }
+}

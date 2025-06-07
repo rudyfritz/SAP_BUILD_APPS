@@ -1,0 +1,52 @@
+{
+  "sap.app": {
+    "id": "buildapps216461",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "APP_ON-DEVICE_STORAGE",
+    "subTitle": "",
+    "info": "",
+    "description": "",
+    "crossNavigation": {
+      "inbounds": {
+        "external": {
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          },
+          "semanticObject": "buildapps216461",
+          "action": "open",
+          "title": "APP_ON-DEVICE_STORAGE"
+        }
+      }
+    }
+  },
+  "sap.flp": {
+    "type": "application",
+    "config": {
+      "target": {
+        "type": "URL",
+        "url": "/buildapps216461.buildapps216461/index.html",
+        "navmode": "inplace",
+        "parameters": {}
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "URL",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "icons": {
+      "icon": ""
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "buildapps216461"
+  }
+}
